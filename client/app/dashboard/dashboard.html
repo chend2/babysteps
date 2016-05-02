@@ -1,6 +1,12 @@
 <div ui-view>
 
   <h1>Dashboard</h1>
+  <div>
+    <div class="container">
+      <br />
+      <button class="btn btn-primary" ng-click="addchild.open()">ADD</button>&nbsp;Add a child
+    </div>
+  </div>
 
   <button ng-click="dashboard.displayUsers()">See the User!</button>
   <div ng-repeat="child in dashboard.children">

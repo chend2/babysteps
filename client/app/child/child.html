@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h3 class="modal-title">My Child Info</h3>
+</div>
+<div class="modal-body">
+<form name="childForm">
+  <div class="form-group" ng-class="{'has-error': childForm.name.$invalid}">
+    Name: <input type="text" class="childForm-control" name="name" ng-model="child.name" placeholder="Child Name" required />
+  </div>
+  <div class="form-group" ng-class="">
+    <pre><button type="button" class="btn btn-default" ><i class="glyphicon glyphicon-calendar" ng-click="modal.open1()" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="modal.popup1.opened" datepicker-options="modal.dateOptions" ng-required="true" close-text="modal.Close" alt-input-formats="modal.altInputFormats" ></i></button>&nbsp;Child's Birthday: <em>{{dt | date:'fullDate' }}</em></pre>
+  </div>
+  <div class="form-group" ng-class="">
+    <select ng-model="typesOfConditions" ng-options="types for types in modal.conditions"></select>
+  </div>
+</form>
+<div id="inputValue">
+Name: {{child.name}}
+<br />
+Birthday:{{dt}}
+<br />
+Condition: {{typesOfConditions}}
+</div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-info" ng-click="modal.addChild(child.name, dt, typesOfConditions)">Add Child</button>
+  <button class="btn btn-info" ng-click="modal.close()">Close</button>
+</div>
