@@ -3,8 +3,8 @@ var router = express.Router();
 var db = require('../db.js');
 
 
-router.get('/', function(req, res) {
-   db.users.find( {'firstName': 'Daniel'}, function(err, users){
+router.get('/', function(req, res){
+   db.users.find( { username : 'chend2'}, function(err, users){
     if(err){
       console.log('error');
     }else{
@@ -68,3 +68,4 @@ router.post('/', function(req,res){
 });
 
 module.exports = router;
+

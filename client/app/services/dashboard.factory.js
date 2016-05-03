@@ -9,11 +9,16 @@
       var service = {
         getUser: getUser,
         addChild: addChild
+        removeThisChild : removeThisChild
       };
       return service;
 
       function getUser(){
         return $http.get('/dashboard');
+      }
+
+      function removeThisChild(childName, userName){
+        return $http.post('/dashboard', {firstName: childName, userName: userName});
       }
 
       function addChild(params){
