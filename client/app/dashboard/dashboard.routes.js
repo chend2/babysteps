@@ -5,7 +5,7 @@
     .module('baby.dashboard')
     .config(config);
 
-  function config ($stateProvider) {
+  function config($stateProvider) {
     $stateProvider
       .state('dashboard', {
         url: '/dashboard',

@@ -5,7 +5,7 @@
     .module('baby.about')
     .config(config);
 
-  function config ($stateProvider) {
+  function config($stateProvider) {
     $stateProvider
       .state('about', {
         url: '/about',

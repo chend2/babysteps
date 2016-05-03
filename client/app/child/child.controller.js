@@ -3,15 +3,24 @@
 
     angular
       .module('baby.dashboard')
-      .controller('ModalController', ModalController);
+      .controller('ChildController', ChildController);
 
-      function ModalController($uibModalInstance) {
+      function ChildController($uibModalInstance, dashboard) {
         var vm = this;
 
         vm.conditions = ['Normal', 'Cerebral Palsy', 'Down Syndrome'];
 
-        vm.addChild = function (name, birthday, condition){
-          console.log('Name: ', name,' birthday: ', birthday, ' condition: ', condition);
+        vm.addChild = function (firstName, lastName, birthday, condition){
+          //console.log("Addchild in ChildController", name, " + ", birthday, " + ", condition);
+        	var childObj = {
+        		'firstName': firstName,
+            'lastName': lastName,
+        		'birthday': birthday,
+        		'condition': condition
+        	};
+          //console.log("params", childObj);
+        	dashboard.addChild(childObj);
+          //console.log('Name: ', name,' birthday: ', birthday, ' condition: ', condition);
           vm.close();
         };
 

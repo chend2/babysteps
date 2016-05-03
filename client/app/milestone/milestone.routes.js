@@ -5,7 +5,7 @@
     .module('baby.milestone')
     .config(config);
 
-  function config ($stateProvider) {
+  function config($stateProvider) {
     $stateProvider
       .state('milestone', {
         url: '/milestone',

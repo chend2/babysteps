@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular
+angular
   .module('baby.landing')
   .controller('LandingCtrl', LandingCtrl);
 

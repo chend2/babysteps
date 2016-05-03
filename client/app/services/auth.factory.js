@@ -5,14 +5,13 @@
     .module('baby')
     .factory('auth', auth);
 
-  // $localStorage, $state
+  // $localStorage
   function auth($http, $state) {
     return {
       signup: signup
     };
 
     function signup(userObj) {
-      console.log(userObj);
       return $http.post('/signup', userObj)
         .success(function(resp) {
           console.log('resp', resp);

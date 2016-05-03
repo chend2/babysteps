@@ -7,15 +7,16 @@
 
   // Milestone.$inject = [$http];
 
-  function milestone ($http) {
+  function milestone($http) {
     var service = {
         getCondition: getCondition
     };
     return service;
 
     function getCondition(condition) {
-      var conditionObj = {conditionName : condition};
-
+      var conditionObj = {
+        conditionName : condition
+      };
       return $http.post('/milestone', conditionObj);
     }
 

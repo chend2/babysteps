@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('baby.dashboard', ['ui.bootstrap'])
+    .module('baby.dashboard')
     .controller('DashboardCtrl', DashboardCtrl);
     function DashboardCtrl($state, $uibModal, dashboard) {
       var vm = this;
@@ -22,7 +22,7 @@
       vm.open = function() {
         vm.modalInstance = $uibModal.open({
           templateUrl: 'app/child/child.html',
-          controller: 'ModalController as modal'
+          controller: 'ChildController as child'
         });
       };
     }
