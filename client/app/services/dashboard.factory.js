@@ -8,7 +8,7 @@
     function dashboard($http){
       var service = {
         getUser: getUser,
-        addChild: addChild
+        addChild: addChild,
         removeThisChild : removeThisChild
       };
       return service;
