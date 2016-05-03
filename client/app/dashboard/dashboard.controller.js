@@ -33,11 +33,11 @@
           .then(function(data){
             var userObj = data.data;
             vm.users = userObj;
-          })
+          });
       }
 
       function removeChild(childFirstName){
-        console.log("on click this is passed into removeChild", childFirstName)
+        console.log('on click this is passed into removeChild', childFirstName);
         dashboard.removeThisChild(childFirstName, 'chend2');
       }
 
